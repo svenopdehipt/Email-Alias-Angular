@@ -1,0 +1,41 @@
+<main>
+    <mat-toolbar>
+        <span>{{ registered ? messages.registeredTitle : messages.unregisteredTitle }}</span>
+        <span class="spacer"></span>
+        <button mat-button (click)="openLicense()">
+            {{ messages.licenses }}
+        </button>
+    </mat-toolbar>
+    @if (registered) {
+        <mat-list>
+            @if (highlightedEmails.length != 0) {
+                <h3 matSubheader>{{ messages.highlightedEmails }}</h3>
+                @for (email of highlightedEmails; track email) {
+                    <mat-list-item>
+                        <span matListItemTitle>{{email.privateComment}}</span>
+                        <span matListItemLine>{{email.address}}</span>
+                        <button mat-icon-button (click)="copyEmailToClipboard(email)" matListItemMeta>
+                            <mat-icon>content_copy</mat-icon>
+                        </button>
+                    </mat-list-item>
+                }
+                <h3 matSubheader>{{ messages.remainingEmails }}</h3>
+            }
+            @for (email of emails; track email) {
+                <mat-list-item>
+                    <span matListItemTitle>{{email.privateComment}}</span>
+                    <span matListItemLine>{{email.address}}</span>
+                    <button mat-icon-button (click)="copyEmailToClipboard(email)" matListItemMeta>
+                        <mat-icon>content_copy</mat-icon>
+                    </button>
+                </mat-list-item>
+            }
+        </mat-list>
+    } @else {
+        <div class="centered-outer">
+            <div class="centered-inner">
+                {{ messages.register }}
+            </div>
+        </div>
+    }
+</main>
