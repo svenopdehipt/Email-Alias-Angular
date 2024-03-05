@@ -84,7 +84,7 @@ export class AppComponent implements OnInit {
     }
 
     openLicense() {
-        window.open('https://github.com/svenopdehipt/Email-Alias-Angular/blob/main/third-party-licenses.txt', '_blank')
+        window.open('https://github.com/Email-Alias/Email-Alias-Angular/blob/main/third-party-licenses.txt', '_blank')
     }
 }
 
