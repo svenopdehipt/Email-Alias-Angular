@@ -22,29 +22,9 @@ $dark-theme: mat.define-dark-theme((
     ),
 ));
 
-.system-theme {
-    @include mat.all-component-themes($light-theme);
-
-    @media (prefers-color-scheme: dark) {
-        @include mat.all-component-colors($dark-theme);
-    }
-
-    .mat-mdc-snack-bar-container {
-        &.snackbar {
-            --mdc-snackbar-container-color: white;
-            --mdc-snackbar-supporting-text-color: dark;
-
-            @media (prefers-color-scheme: dark) {
-                --mdc-snackbar-container-color: #333;
-                --mdc-snackbar-supporting-text-color: white;
-            }
-        }
-    }
-}
+@include mat.all-component-themes($light-theme);
 
 .light-theme {
-    @include mat.all-component-themes($light-theme);
-
     .mat-mdc-snack-bar-container {
         &.snackbar {
             --mdc-snackbar-container-color: white;
@@ -54,7 +34,6 @@ $dark-theme: mat.define-dark-theme((
 }
 
 .dark-theme {
-    @include mat.all-component-themes($light-theme);
     @include mat.all-component-colors($dark-theme);
 
     .mat-mdc-snack-bar-container {
