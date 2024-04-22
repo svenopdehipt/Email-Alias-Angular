@@ -54,12 +54,21 @@ export class AppComponent implements OnInit {
 
         switch (config.colorScheme) {
             case ColorScheme.system:
-                if (window.matchMedia('(prefers-color-scheme: dark)').matches) {
+                const media = window.matchMedia('(prefers-color-scheme: dark)')
+                if (media.matches) {
                     document.body.classList.add("dark-theme")
                 }
                 else {
                     document.body.classList.add("light-theme")
                 }
+                media.addEventListener('change', event => {
+                    if (event.matches) {
+                        document.body.classList.replace("light-theme", "dark-theme")
+                    }
+                    else {
+                        document.body.classList.replace("dark-theme", "light-theme")
+                    }
+                })
                 break;
             case ColorScheme.light:
                 document.body.classList.add("light-theme")
