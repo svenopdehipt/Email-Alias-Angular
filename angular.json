@@ -20,15 +20,15 @@
               "zone.js"
             ],
             "tsConfig": "tsconfig.app.json",
-            "assets": [
-              "src/extension-function.js"
-            ],
+            "assets": [],
             "styles": [
               "src/styles.scss",
               "src/fonts.css",
               "src/resolution.css"
             ],
-            "scripts": []
+            "scripts": [
+              "src/extension-function.js"
+            ]
           },
           "configurations": {
             "production": {
@@ -85,15 +85,15 @@
               "zone.js/testing"
             ],
             "tsConfig": "tsconfig.spec.json",
-            "assets": [
-              "src/extension-function.js"
-            ],
+            "assets": [],
             "styles": [
               "src/styles.scss",
               "src/fonts.css",
               "src/resolution.css"
             ],
-            "scripts": []
+            "scripts": [
+              "src/extension-function.js"
+            ]
           }
         }
       }
