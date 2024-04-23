@@ -1,9 +1,5 @@
 @use '@angular/material' as mat;
 
-:root {
-  color-scheme: light dark;
-}
-
 @include mat.core();
 
 $light-theme: mat.define-light-theme((
@@ -24,16 +20,14 @@ $dark-theme: mat.define-dark-theme((
 
 @include mat.all-component-themes($light-theme);
 
-.light-theme {
-    .mat-mdc-snack-bar-container {
-        &.snackbar {
-            --mdc-snackbar-container-color: white;
-            --mdc-snackbar-supporting-text-color: dark;
-        }
+.mat-mdc-snack-bar-container {
+    &.snackbar {
+        --mdc-snackbar-container-color: white;
+        --mdc-snackbar-supporting-text-color: dark;
     }
 }
 
-.dark-theme {
+@media screen and (prefers-color-scheme: dark) {
     @include mat.all-component-colors($dark-theme);
 
     .mat-mdc-snack-bar-container {
