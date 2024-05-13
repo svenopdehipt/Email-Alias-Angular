@@ -24,7 +24,7 @@
   },
   "devDependencies": {
     "@angular-devkit/build-angular": "^17.3.6",
-    "@angular/cli": "^17.3.6",
+    "@angular/cli": "^17.3.7",
     "generate-license-file": "^3.4.0",
     "typescript": "^5.4.5"
   }
