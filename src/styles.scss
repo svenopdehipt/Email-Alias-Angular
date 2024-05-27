@@ -2,23 +2,20 @@
 
 @include mat.core();
 
-$light-theme: mat.define-light-theme((
+$light-theme: mat.define-theme((
     color: (
-        primary: mat.define-palette(mat.$blue-palette),
-        accent: mat.define-palette(mat.$blue-gray-palette),
-    ),
-    typography: mat.define-typography-config(),
-    density: 0,
-));
-
-$dark-theme: mat.define-dark-theme((
-    color: (
-        primary: mat.define-palette(mat.$green-palette),
-        accent: mat.define-palette(mat.$amber-palette),
+        theme-type: light,
+        primary: mat.$blue-palette,
+        tertiary: mat.$azure-palette,
     ),
 ));
 
-@include mat.all-component-themes($light-theme);
+$dark-theme: mat.define-theme((
+    color: (
+        primary: mat.$green-palette,
+        tertiary: mat.$orange-palette,
+    ),
+));
 
 .mat-mdc-snack-bar-container {
     &.snackbar {
@@ -27,13 +24,19 @@ $dark-theme: mat.define-dark-theme((
     }
 }
 
-@media screen and (prefers-color-scheme: dark) {
-    @include mat.all-component-colors($dark-theme);
+html {
+    @include mat.core-theme($light-theme);
+    @include mat.button-theme($light-theme);
 
-    .mat-mdc-snack-bar-container {
-        &.snackbar {
-            --mdc-snackbar-container-color: #333;
-            --mdc-snackbar-supporting-text-color: white;
+    @media screen and (prefers-color-scheme: dark) {
+        @include mat.core-theme($dark-theme);
+        @include mat.button-theme($dark-theme);
+
+        .mat-mdc-snack-bar-container {
+            &.snackbar {
+                --mdc-snackbar-container-color: #333;
+                --mdc-snackbar-supporting-text-color: white;
+            }
         }
     }
 }
