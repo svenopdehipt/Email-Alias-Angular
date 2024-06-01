@@ -21,7 +21,6 @@ $dark-theme: mat.define-theme((
 .mat-mdc-snack-bar-container {
     &.snackbar {
         --mdc-snackbar-container-color: white;
-        --mdc-snackbar-supporting-text-color: dark;
     }
 }
 
@@ -30,13 +29,12 @@ html {
     @include mat.button-theme($light-theme);
 
     @media screen and (prefers-color-scheme: dark) {
-        @include mat.core-theme($dark-theme);
-        @include mat.button-theme($dark-theme);
+        @include mat.core-color($dark-theme);
+        @include mat.button-color($dark-theme);
 
         .mat-mdc-snack-bar-container {
             &.snackbar {
                 --mdc-snackbar-container-color: #333;
-                --mdc-snackbar-supporting-text-color: white;
             }
         }
     }
