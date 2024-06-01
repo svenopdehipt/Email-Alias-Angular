@@ -492,12 +492,12 @@ PERFORMANCE OF THIS SOFTWARE.
 
 The following npm packages may be included in this product:
 
- - @angular/animations@18.0.0
- - @angular/common@18.0.0
- - @angular/compiler@18.0.0
- - @angular/core@18.0.0
- - @angular/forms@18.0.0
- - @angular/platform-browser@18.0.0
+ - @angular/animations@18.0.1
+ - @angular/common@18.0.1
+ - @angular/compiler@18.0.1
+ - @angular/core@18.0.1
+ - @angular/forms@18.0.1
+ - @angular/platform-browser@18.0.1
 
 These packages each contain the following license and notice below:
 
@@ -616,8 +616,8 @@ THE SOFTWARE.
 
 The following npm packages may be included in this product:
 
- - @angular/cdk@18.0.0
- - @angular/material@18.0.0
+ - @angular/cdk@18.0.1
+ - @angular/material@18.0.1
 
 These packages each contain the following license and notice below:
 
