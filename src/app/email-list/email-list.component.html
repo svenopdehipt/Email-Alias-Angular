@@ -1,0 +1,9 @@
+@for (email of emails; track email) {
+    <mat-list-item>
+        <span matListItemTitle>{{email.privateComment}}</span>
+        <span matListItemLine>{{email.address}}</span>
+        <button mat-icon-button (click)="copyEmailToClipboard(email)" matListItemMeta>
+            <mat-icon>content_copy</mat-icon>
+        </button>
+    </mat-list-item>
+}

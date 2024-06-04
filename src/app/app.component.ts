@@ -13,11 +13,12 @@ import {MatToolbar} from "@angular/material/toolbar";
 import {Messages} from "./messages";
 import {ColorScheme, Config} from "./config";
 import {MatSnackBar} from "@angular/material/snack-bar";
+import {EmailListComponent} from "./email-list/email-list.component";
 
 @Component({
     selector: 'app-root',
     standalone: true,
-    imports: [MatList, MatListItem, MatIconButton, MatListItemMeta, MatIcon, MatListItemLine, MatToolbar, MatButton, MatListSubheaderCssMatStyler],
+    imports: [MatList, MatListItem, MatIconButton, MatListItemMeta, MatIcon, MatListItemLine, MatToolbar, MatButton, MatListSubheaderCssMatStyler, EmailListComponent],
     encapsulation: ViewEncapsulation.None,
     templateUrl: './app.component.html',
     styleUrl: './app.component.css',
@@ -28,8 +29,6 @@ export class AppComponent implements OnInit {
     isPhone!: boolean
     highlightedEmails: Email[] = []
     emails: Email[] = []
-
-    constructor(private _snackBar: MatSnackBar) {}
 
     async ngOnInit() {
         const config = await getConfig();
@@ -67,19 +66,6 @@ export class AppComponent implements OnInit {
         if (!config.isPhone) {
             document.body.classList.add('large_screen');
         }
-    }
-
-    async copyEmailToClipboard(email: Email) {
-        await navigator.clipboard.writeText(email.address)
-        this._snackBar.open(
-            this.messages.copiedToClipboard,
-            undefined,
-            {
-                duration: 2000,
-                verticalPosition: this.isPhone ? "top" : "bottom",
-                panelClass: "snackbar"
-            }
-        )
     }
 
     openLicense() {
