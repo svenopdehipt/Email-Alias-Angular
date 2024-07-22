@@ -23,7 +23,7 @@
     "zone.js": "^0.14.7"
   },
   "devDependencies": {
-    "@angular-devkit/build-angular": "^18.1.0",
+    "@angular-devkit/build-angular": "^18.1.1",
     "@angular/cli": "^18.1.0",
     "generate-license-file": "^3.5.0",
     "typescript": "^5.5.3"
