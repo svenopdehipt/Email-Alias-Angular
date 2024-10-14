@@ -213,7 +213,7 @@ Apache License
 
 The following npm package may be included in this product:
 
- - parse5@7.1.2
+ - parse5@7.2.0
 
 This package contains the following license and notice below:
 
@@ -282,12 +282,12 @@ PERFORMANCE OF THIS SOFTWARE.
 
 The following npm packages may be included in this product:
 
- - @angular/animations@18.2.7
- - @angular/common@18.2.7
- - @angular/compiler@18.2.7
- - @angular/core@18.2.7
- - @angular/forms@18.2.7
- - @angular/platform-browser@18.2.7
+ - @angular/animations@18.2.8
+ - @angular/common@18.2.8
+ - @angular/compiler@18.2.8
+ - @angular/core@18.2.8
+ - @angular/forms@18.2.8
+ - @angular/platform-browser@18.2.8
 
 These packages each contain the following license and notice below:
 
@@ -347,8 +347,8 @@ THE SOFTWARE.
 
 The following npm packages may be included in this product:
 
- - @angular/cdk@18.2.7
- - @angular/material@18.2.7
+ - @angular/cdk@18.2.8
+ - @angular/material@18.2.8
 
 These packages each contain the following license and notice below:
 
